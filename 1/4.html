@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+ <script>
+     var funcs = [];
+
+     object = {
+         a: true,
+         b:true,
+         c:true
+     };
+
+     for(let key in object){
+         funcs.push(function () {
+             console.log(key);
+         });
+     }
+
+     funcs.forEach(function (func) {
+         func(); //выведет а а затем б а затем с
+     })
+ </script>
+</body>
+</html>

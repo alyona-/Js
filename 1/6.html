@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var funcs =[],object = {
+        a:true,
+        b:true,
+        c:true
+    };
+
+    //не вызовет ошибку
+    for (const key in object){
+        funcs.push(function(){
+            console.log(key);
+        });
+    }
+
+    funcs.forEach(function (func) {
+        func(); //выведет а б с
+    });
+</script>
+</body>
+</html>
